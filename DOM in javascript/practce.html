@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+
+<body>
+    <p class="oping">This is somthing to set classList to set id new things</p>
+
+    <style>
+        .oping {
+            width: 90%;
+            height: 200px;
+            font-size: 3em;
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+            margin-left: 0 auto;
+            align-items: center;
+            border: 2px solid white;
+
+        }
+
+        .changing {
+            font-style: italic;
+            color: green;
+
+        }
+    </style>
+    <script>
+        let button = document.createElement('button');
+        button.innerHTML = "click me";
+        button.style.backgroundColor = "red"
+        button.style.color = "white"
+        button.style.width = "200px"
+        button.style.height = "40px"
+        button.style.fontSize = "1em"
+        button.style.border = "none"
+        button.style.borderRadius = "8px"
+        button.style.marginLeft = "40%"
+        button.style.marginTop = "5%"
+        console.log(button)
+        document.querySelector('body').prepend(button);
+        const p = document.querySelector('p');
+
+        function colorChanger() {
+            return Math.floor(Math.random(10) * 1000000)
+        }
+        button.addEventListener('click', () => {
+            let che = p.style.color = "#" + colorChanger();
+            let Borders = p.style.border = " 2px solid" + "#" + colorChanger();
+            console.log(Borders)
+            console.log(che)
+        })
+        let body = document.querySelector('body');
+        body.style.backgroundColor = "black";
+        setInterval(() => {
+            let che = p.style.color = "#" + colorChanger();
+            let Borders = p.style.border = " 2px solid" +  "#" + colorChanger();
+            console.log(Borders)
+            console.log(che)
+            p.innerHTML =  "This is color of text" + che + Borders;
+        }, 100);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.boxs {
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+    border: 2px outset black;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
